@@ -19,7 +19,6 @@ section {
 
 .grid-container {
     width: 800px;
-    border: 3px solid red;
     display: flex;
     flex-wrap: wrap;
 }
