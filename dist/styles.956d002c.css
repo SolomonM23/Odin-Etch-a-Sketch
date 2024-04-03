@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 html {
@@ -18,10 +19,15 @@ section {
 
 .grid-container {
     border: 3px solid red;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.grid-squares {
-    /* width: ; */
+.grid-square {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(175, 191, 205);
+    border: 1px solid rgb(96, 96, 96);
 }
 
 /*# sourceMappingURL=/styles.956d002c.css.map */
