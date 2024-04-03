@@ -122,10 +122,16 @@ var gridContainer = document.querySelector('.grid-container');
 
 //two loops to get rows and columns
 for (var i = 0; i < 16; i++) {
-  for (var j = 0; j < 16; j++) {
+  var _loop = function _loop() {
     var square = document.createElement('div');
     square.classList.add('grid-square');
     gridContainer.appendChild(square);
+    square.addEventListener('mouseover', function () {
+      square.style.background = 'blue';
+    });
+  };
+  for (var j = 0; j < 16; j++) {
+    _loop();
   }
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
