@@ -119,20 +119,34 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 var gridContainer = document.querySelector('.grid-container');
+var numOfSquares = 20;
 
 //two loops to get rows and columns
-for (var i = 0; i < 16; i++) {
+for (var i = 0; i < numOfSquares; i++) {
   var _loop = function _loop() {
     var square = document.createElement('div');
     square.classList.add('grid-square');
+
+    //get calculated size
+    var squareSize = calcSquareSize();
+    square.style.width = "".concat(squareSize, "px");
+    square.style.height = "".concat(squareSize, "px");
     gridContainer.appendChild(square);
+    //change color on hover
     square.addEventListener('mouseover', function () {
       square.style.background = 'blue';
     });
   };
-  for (var j = 0; j < 16; j++) {
+  for (var j = 0; j < numOfSquares; j++) {
     _loop();
   }
+}
+
+//dynamically change the square dimension
+function calcSquareSize() {
+  var containerWidth = gridContainer.clientWidth;
+  var squareSize = containerWidth / numOfSquares;
+  return squareSize;
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
