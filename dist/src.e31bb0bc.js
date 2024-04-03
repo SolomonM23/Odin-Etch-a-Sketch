@@ -119,6 +119,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 var gridContainer = document.querySelector('.grid-container');
+
+//two loops to get rows and columns
+for (var i = 0; i < 16; i++) {
+  for (var j = 0; j < 16; j++) {
+    var square = document.createElement('div');
+    square.classList.add('grid-square');
+    gridContainer.appendChild(square);
+  }
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
