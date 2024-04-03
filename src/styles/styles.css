@@ -1,0 +1,11 @@
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    border: 3px solid red;
+}
