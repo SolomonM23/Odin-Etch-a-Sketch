@@ -151,6 +151,8 @@ function calcSquareSize() {
   var containerWidth = gridContainer.clientWidth;
   return containerWidth / numOfSquares;
 }
+
+//clear grid and make new one
 resetBtn.addEventListener('click', function () {
   gridContainer.innerHTML = '';
   var userChoice = prompt('pick a number');

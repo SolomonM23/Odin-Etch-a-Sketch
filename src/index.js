@@ -31,6 +31,7 @@ function calcSquareSize() {
     return containerWidth / numOfSquares;
 }
 
+//clear grid and make new one
 resetBtn.addEventListener('click', function(){
     gridContainer.innerHTML = '';
     let userChoice = prompt('pick a number');
