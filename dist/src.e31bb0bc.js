@@ -120,7 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.js":[function(require,module,exports) {
 var gridContainer = document.querySelector('.grid-container');
 var resetBtn = document.getElementById('#btn');
-var numOfSquares = 20;
+var numOfSquares = prompt('pick a number');
 
 //two loops to get rows and columns
 for (var i = 0; i < numOfSquares; i++) {

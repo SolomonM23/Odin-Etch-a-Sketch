@@ -1,7 +1,8 @@
 let gridContainer = document.querySelector('.grid-container');
 let resetBtn = document.getElementById('#btn');
 
-let numOfSquares = 20;
+let numOfSquares = prompt('pick a number');
+
 
 //two loops to get rows and columns
 for (let i = 0; i < numOfSquares; i++){
