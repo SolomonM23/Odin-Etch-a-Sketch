@@ -154,6 +154,9 @@ function calcSquareSize() {
 resetBtn.addEventListener('click', function () {
   gridContainer.innerHTML = '';
   var userChoice = prompt('pick a number');
+  while (userChoice > 64 || isNaN(userChoice)) {
+    userChoice = prompt('pick a number less than or equal to 64.');
+  }
   numOfSquares = parseInt(userChoice); // Update the variable
   createGrid(numOfSquares);
 });
